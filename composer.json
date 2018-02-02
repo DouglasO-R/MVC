@@ -1,0 +1,21 @@
+{
+    "name":"son/mvc",
+
+    "require":{
+        "php":">=5.6"
+    },
+
+    "authors": [
+        {
+            "name": "Douglas O. Ribeiro",
+            "email": "douglasor@outlook.com"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "SON\\":"vendor/SON/",
+            "App\\":"App/"
+        }
+    }
+}
