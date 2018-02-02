@@ -8,14 +8,14 @@ class IndexController
     public function index()
     {
 
-        echo "Rota: / controller: index";
+        include_once "../App/Views/index/index.phtml";
 
     }
 
     public function contato()
     {
 
-        echo"Rota : /contato  controller: contato";
+        include_once "../App/Views/index/contato.phtml";
     }
 
 }

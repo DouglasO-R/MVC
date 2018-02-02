@@ -5,6 +5,7 @@
         "php":">=5.6"
     },
 
+    "description": "Mini Framework de estudo",
     "authors": [
         {
             "name": "Douglas O. Ribeiro",
