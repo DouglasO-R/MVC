@@ -10,7 +10,7 @@ class Route extends Bootstrap
     {
 
         $routes['home'] = array("route"=>'/',"controller"=>"indexController","action"=>"index");
-        $routes['contato'] = array("route"=>'/contato',"controller"=>"indexController","action"=>"contato");
+        $routes['contato'] = array("route"=>'/contato',"controller"=>"indexController","action"=>"contato");       
         $this->setRoutes($routes);
     }
 }

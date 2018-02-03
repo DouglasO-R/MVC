@@ -2,20 +2,26 @@
 
 namespace App\Controllers;
 
-class IndexController
+use SON\Controller\Action;
+
+class IndexController extends Action
 {
+    
 
     public function index()
     {
-
-        include_once "../App/Views/index/index.phtml";
+        $this->view->cars = array("punto","civic");
+        $this->render("index");
 
     }
 
     public function contato()
     {
-
-        include_once "../App/Views/index/contato.phtml";
+        $this->view->cars = array("punto","civic");
+        $this->render("contato",false);        
     }
+  
+
+    
 
 }
