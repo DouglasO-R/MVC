@@ -2,9 +2,9 @@
 
 namespace SON\Init;
 
-abstract class Bootstrap
+abstract class Bootstrap 
 {
-    private $routes;
+    private $route;
 
     public function __construct()
     {
@@ -18,7 +18,7 @@ abstract class Bootstrap
 
     protected function run($url)
     {
-        array_walk($this->routes,function($route) use ($url){
+        array_walk($this->route,function($route) use ($url){
             if($url == $route['route'])
             {
                 $class = "App\\Controllers\\".ucfirst($route['controller']);
@@ -32,7 +32,7 @@ abstract class Bootstrap
 
     protected function setRoutes(array $routes)
     {
-        $this->routes = $routes;
+        $this->route = $routes;
     }
 
     protected function getUrl()
