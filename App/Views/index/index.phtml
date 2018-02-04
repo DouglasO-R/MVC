@@ -1,1 +1,10 @@
 Rota: / Controller: IndexController Action:index View:index.phtml
+
+<br/>
+
+<?php foreach($this->view->clientes as $cliente): ?>
+    <p><?= $cliente["nome"] ?><p>
+    <p><?= $cliente["descricao"] ?><p>
+
+    <hr>
+<?php endforeach ?>
