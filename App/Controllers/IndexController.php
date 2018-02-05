@@ -14,15 +14,8 @@ class IndexController extends Action
 
     public function index()
     {
-        //$this->view->cars = array("punto","civic");
-
-        
-        $db = new Conn();
-        
-        $clientes = new Cliente($db->getDb());
-
-        //$cliente = Container::getModel("Cliente");
-        
+                       
+        $cliente = Container::getModel("Cliente");        
         $this->view->clientes = $cliente->fetchALL();
 
         $this->render("index");
@@ -31,7 +24,9 @@ class IndexController extends Action
 
     public function contato()
     {
-        $this->view->cars = array("punto","civic");
+        $cliente = Container::getModel("Cliente");        
+        $this->view->clientes = $cliente->find(2);
+
         $this->render("contato",false);        
     }
   
